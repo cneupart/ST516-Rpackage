@@ -1,0 +1,10 @@
+Package: ExamST516
+Type: Package
+Title: Package for Exam in the course ST516
+Version: 0.1.0
+Author: Maria Frey & Cecilie Neupart
+Maintainer: <mfrey13@student.sdu.dk>, <ceneu13@student.sdu.dk>
+Description: It does stuff.
+License: None
+LazyData: TRUE
+RoxygenNote: 5.0.1
