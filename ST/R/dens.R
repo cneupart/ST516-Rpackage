@@ -50,10 +50,14 @@ dens <- function(x,d=NULL,h=NULL,method="naive"){
     return(as.table(densities))
   }
   if(method=="naive"){                       # naive density estimation
-    w <- function(t){if(abs(t)<1)1/2 else 0} # weight-function
     sum <- 0
     for (i in 1:n){
-      sum <- sum + 1/h * w((d-x[i])/h)
+      w <- (d-x[i])/h
+      if(abs(w)<1){
+        sum <- sum + 1/(2*h)
+      }else{
+        sum <- sum
+      }
     }
     f <- 1/n * sum
     return(f)
