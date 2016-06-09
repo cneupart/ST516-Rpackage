@@ -18,7 +18,6 @@
 densplot <- function(x,n=500,method="naive", from=NULL, to=NULL){
   if(!is.numeric(n) | n < 1){stop('n must be positive integer')}
   if(!is.vector(x) | !is.numeric(x)){stop('x must be a numeric vector')}
-  if(from>to){stop('from must be smaller than to')}
 
 
   if (length(from)==0){
